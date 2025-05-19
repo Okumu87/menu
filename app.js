@@ -88,22 +88,10 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 window.addEventListener("DOMContentLoaded", function () {
   let displayMenu = menu.map(function (item) {
     displayMenuItems(menu);
-    //     // console.log(item);
-    //     return `  <article class="menu-item">
-    //           <img src="${item.img}" alt="${item.title}" class="photo" />
-    //           <div class="item-info">
-    //             <header>
-    //               <h4>${item.title}</h4>
-    //               <h4 class="price">$${item.price}</h4>
-    //             </header>
-    //             <p class="item-text">
-    //             ${item.desc}
-    //             </p>
-    //           </div>
-    //         </article>`;
-    //   });
-    //   displayMenu.join("");
-    //   sectionCenter.innerHTML = displayMenu;
+    //display category
+    const categories = menu.map(function (item) {
+      return item.category;
+    });
   });
 
   // filter items
@@ -146,3 +134,5 @@ window.addEventListener("DOMContentLoaded", function () {
     sectionCenter.innerHTML = displayMenu;
   }
 });
+
+// 2.57
